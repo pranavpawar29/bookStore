@@ -1,3 +1,8 @@
 language: java
 jdk:
   - openjdk19
+
+deploy:
+  provider: heroku
+  api_key: $HEROKU_TOKEN
+  app: "book-demo-store-my-app"
