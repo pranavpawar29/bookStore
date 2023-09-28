@@ -6,6 +6,9 @@ jdk:
 before_install:
   - chmod +x gradlew
 
+before_deploy:
+  - cp system.properties $HOME/.heroku/
+
 script:
   - ./gradlew build
 
