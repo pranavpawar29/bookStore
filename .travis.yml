@@ -1,12 +1,13 @@
 language: java
 
 jdk:
-  - openjdk17
+  - openjdk19
 
 before_install:
   - chmod +x gradlew
 
 before_deploy:
+  - mkdir -p $HOME/.heroku/
   - cp system.properties $HOME/.heroku/
 
 script:
